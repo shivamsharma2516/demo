@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	 ​<script type="text/javascript">
+      let tmp , flag=true;
+      function f1(){
+      	tmp= setInterval("callitrept()", 1000);
+      	document.body.onkeyup = function(e){
+      		if(e.keyCode==32){
+      			if (flag==true){
+      				clearInterval(tmp)
+      				flag=false
+      			}
+      			else{
+      				tmp= setInterval("callitrept()", 1000);
+      				flag=true;
+      			} 
+      		} 
+      	}
+      }
+      function callitrept() {
+      	document.getElementById("snap").click();
+      }
+  </script> 
+   ​
+
+</head>
+
+<body onload="f1()">
+	<video id="video" width="640" height="480" autoplay=""></video>
+	<button id="snap"></button>
+	<canvas id="canvas" width="640" height="480"></canvas>
+	<script src="C:\Users\User\Desktop\webcam\app.js"></script>
+</body>
+</html>
